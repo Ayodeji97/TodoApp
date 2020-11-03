@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "819864045610",
+    "firebase_url": "https://doneapp-f24a6.firebaseio.com",
+    "project_id": "doneapp-f24a6",
+    "storage_bucket": "doneapp-f24a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819864045610:android:7fecfa14c2d41f83191b53",
+        "android_client_info": {
+          "package_name": "com.mylearning.doneapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819864045610-8k0dd13ilf4dkm3vb3vrnui2iofelqg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzCsv2xz6Hkr_PzHek0fQQRyleduQTl8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819864045610-8k0dd13ilf4dkm3vb3vrnui2iofelqg6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
