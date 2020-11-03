@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.mylearning.doneapp.databinding.ActivityRegisterBinding
 
@@ -67,15 +68,15 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun registerUser(email : String, password : String) {
+        binding.progressBar.visibility = View.VISIBLE
         // creating a user
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {task ->
+                binding.progressBar.visibility = View.GONE
                 // successful registration
                 if (task.isSuccessful) {
-                    val intent = Intent(this@RegisterActivity, HomeActivity::class.java).apply {
-                        // This helps to close other activity : so when the user login into the app...the user cannot see register of login activity except when he logs out
-                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    }
+
+                    login()
 
                 } else {
                     task.exception?.message?.let {
@@ -84,6 +85,14 @@ class RegisterActivity : AppCompatActivity() {
                 }
 
             }
+    }
 
+    override fun onStart() {
+        super.onStart()
+
+        // like a conditional statement to check if the a user has already sign in before
+        mAuth.currentUser?.let {
+            login()
+        }
     }
 }

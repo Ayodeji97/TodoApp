@@ -15,4 +15,10 @@
     <string name="don_t_have_account_sign_in_str">Don\'t Have Account?</string>
     <string name="current_details_str">Current Details</string>
     <string name="daniel_ayodeji_str">Daniel Ayodeji</string>
+    
+<!--    drawer items-->
+    <string name="profile_str">Profile</string>
+    <string name="todolist_str">Profile</string>
+    <string name="statistics_str">Profile</string>
+    <string name="about_str">Profile</string>
 </resources>

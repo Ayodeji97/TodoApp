@@ -77,5 +77,8 @@ dependencies {
     // Circular image library
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    // material design
+    implementation "com.google.android.material:material:$support_lib_version"
+
 
 }
