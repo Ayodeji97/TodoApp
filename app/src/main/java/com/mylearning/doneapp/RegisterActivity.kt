@@ -67,11 +67,12 @@ class RegisterActivity : AppCompatActivity() {
 
     }
 
+    /** Register user **/
     private fun registerUser(email : String, password : String) {
         binding.progressBar.visibility = View.VISIBLE
         // creating a user
         mAuth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener {task ->
+            .addOnCompleteListener(this) {task ->
                 binding.progressBar.visibility = View.GONE
                 // successful registration
                 if (task.isSuccessful) {

@@ -66,6 +66,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun loginUser(email: String, password: String) {
 
+        // progress bar is use because connection to firebase is an internet connection process
         binding.progressBar.visibility = View.VISIBLE
 
         mAuth.signInWithEmailAndPassword(email, password)
